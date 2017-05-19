@@ -1,10 +1,5 @@
 <?php
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "orangegit12";
-// $dbname = "essentials_db";
-
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $servername = $url["host"];
 $username = $url["user"];
