@@ -9,14 +9,6 @@ $pass = mysqli_real_escape_string($conn, $_POST['pass']);
 
 $passVal = mysqli_real_escape_string($conn, $_POST['passVal']);
 
-// if (empty($userID)) {
-// 	header("Location: ../index.php?error=empty");
-// 	exit();
-// } 
-// if (empty($pass)) {
-// 	header("Location: ../index.php?error=empty");
-// 	exit();
-// } 
 if ($pass != $passVal) {
 
 	include '../header.php';
