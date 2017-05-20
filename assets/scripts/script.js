@@ -60,90 +60,94 @@ $(document).on('click', '#submitItem', function() {
     console.log(category);
     console.log(quantity);
 
-    if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-    } else {
-        // code for IE6, IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log('Item added');
+    if (name != '' && quantity != '') {
 
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("fbBox").innerHTML = this.responseText;
-                }
-            };
-
-            xmlhttp.open("GET", "includes/retrieve.inc.php?q=" + str, true);
-            xmlhttp.send();
-
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("disposablesBox").innerHTML = this.responseText;
-                }
-            };
-
-            xmlhttp.open("GET", "includes/retrieveB.inc.php?q=" + str, true);
-            xmlhttp.send();
-
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("otherBox").innerHTML = this.responseText;
-
-                    $('#nameVal').val(null);
-
-                    $('#selectDiv option:eq(0)').prop('selected', true);
-
-                    $('#quantVal').val(null);
-
-
-                }
-            };
-
-            xmlhttp.open("GET", "includes/retrieveC.inc.php?q=" + str, true);
-            xmlhttp.send();
-
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-    };
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log('Item added');
 
-    xmlhttp.open("GET", "includes/insert.inc.php?n=" + name + "&c=" + category + "&q=" + quantity, true);
-    xmlhttp.send();
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("fbBox").innerHTML = this.responseText;
+                    }
+                };
+
+                xmlhttp.open("GET", "includes/retrieve.inc.php?q=" + str, true);
+                xmlhttp.send();
+
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("disposablesBox").innerHTML = this.responseText;
+                    }
+                };
+
+                xmlhttp.open("GET", "includes/retrieveB.inc.php?q=" + str, true);
+                xmlhttp.send();
+
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("otherBox").innerHTML = this.responseText;
+
+                        $('#nameVal').val(null);
+
+                        $('#selectDiv option:eq(0)').prop('selected', true);
+
+                        $('#quantVal').val(null);
 
 
-    if (category == 'foodandbeverage' && name != '' && quantity != '') {
-        $('#fbIcon').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-    }
+                    }
+                };
 
-    if (category == 'disposables' && name != '' && quantity != '') {
-        $('#dispIcon').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-    }
+                xmlhttp.open("GET", "includes/retrieveC.inc.php?q=" + str, true);
+                xmlhttp.send();
 
-    if (category == 'other' && name != '' && quantity != '') {
-        $('#otherIcon').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            }
+        };
+
+        xmlhttp.open("GET", "includes/insert.inc.php?n=" + name + "&c=" + category + "&q=" + quantity, true);
+        xmlhttp.send();
+
+
+        if (category == 'foodandbeverage' && name != '' && quantity != '') {
+            $('#fbIcon').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        }
+
+        if (category == 'disposables' && name != '' && quantity != '') {
+            $('#dispIcon').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        }
+
+        if (category == 'other' && name != '' && quantity != '') {
+            $('#otherIcon').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        }
+
     }
 
 });
