@@ -20,7 +20,8 @@
 	<div class="row">
 		<div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-12" id="submitBox">
 			<br>
-			<form action="javascript:0">
+			<!-- <form action="javascript:0"> -->
+			<form action="javascript:void(0);">
 				<div class="form-group">
 		 			<input class="form-control" name="item" placeholder="Item" maxlength="15" id="nameVal" required>
 		 		</div>
