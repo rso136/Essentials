@@ -549,6 +549,10 @@ ul.techStack li {
 		margin: 10px 0 10px 0;
 	}
 
+	.jumbotron {
+		height: 380px;
+	}
+
 	#jumboHeading {
 		font-size: 3em;
 		margin: 80px auto 0 auto;
@@ -582,7 +586,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 
 	.jumbotron {
-		height: 40vh;
+		height: 400px;
 	}
 
 	#jumboHeading {
