@@ -1,5 +1,10 @@
 <?php
 	include 'header.php'
+
+	if (isset($_SESSION['id'])) {
+        
+        header("Location: home.php");
+    }
 ?>
 <div class="jumbotron">
 	<h1 id="jumboHeading">ESSENTIALS</h1>
