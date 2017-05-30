@@ -7,6 +7,7 @@ include 'header.php';
 <div class="jumbotron">
 	<h1 id="jumboHeading">ESSENTIALS</h1>
 	<h2 id="jumboSub">Home & Lifestyle</h2>
+	<h3 id="headingSub">PHP Version</h3>
 	<!-- <button type="button" class="btn btn-jumbo btn-lg">Join Today <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button> -->
 </div>
 <div class="container-fluid">

@@ -37,6 +37,13 @@ body {
 	letter-spacing: 4px;
 }
 
+#headingSub {
+	margin-left: 42vw;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 2em;
+}
+
 #jumboSub {
 	margin-left: 42vw;
 	color: #BAB3AD;
@@ -558,6 +565,11 @@ ul.techStack li {
 		margin: 80px auto 0 auto;
 	}
 
+	#headingSub {
+		font-size: 1.5em;
+		margin: 10px auto 0 auto;
+	}
+
 	#jumboSub {
 		font-size: 2em;
 		margin: 0 auto;
@@ -591,6 +603,11 @@ and (max-device-width : 1024px) {
 
 	#jumboHeading {
 		margin: 80px auto 0 auto;
+	}
+
+	#headingSub {
+		font-size: 1.5em;
+		margin: 10px auto 0 auto;
 	}
 
 	#jumboSub {

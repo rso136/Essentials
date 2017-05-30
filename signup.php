@@ -5,6 +5,7 @@
 <div class="jumbotron">
 	<h1 id="jumboHeading">ESSENTIALS</h1>
 	<h2 id="jumboSub">Home & Lifestyle</h2>
+	<h3 id="headingSub">PHP Version</h3>
 	<a href="index.php" type="button" class="btn btn-jumbo btn-lg">Go Back <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a> 
 </div>
 
